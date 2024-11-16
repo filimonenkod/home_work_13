@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.special {
+    animation: changingColor 3s infinite;
+}
+
+@keyframes changingColor {
+    0%, 100% {
+        fill: aquamarine;
+        stroke: crimson;
+    }
+
+    5% {
+        fill: rgb(104, 216, 166);
+        stroke: rgb(8, 43, 68);
+    }
+
+    10% {
+        fill: rgb(198, 155, 238);
+        stroke: rgb(34, 101, 23);
+    }
+
+    15% {
+        fill: rgb(79, 25, 229);
+        stroke: rgb(109, 23, 75);
+    }
+
+    20% {
+        fill: blueviolet;
+        stroke: rgb(8, 43, 68);
+    }
+
+    25% {
+        fill: rgb(87, 0, 168);
+        stroke: rgb(172, 210, 238);
+    }
+
+    30% {
+        fill: blueviolet;
+        stroke: rgb(8, 43, 68);
+    }
+
+    40% {
+        fill: rgb(51, 51, 174);
+        stroke: rgb(138, 194, 234);
+    }
+
+    50% {
+        fill: rgb(226, 86, 43);
+        stroke: rgb(68, 8, 64);
+    }
+
+    60% {
+        fill: brown;
+        stroke: rgb(239, 251, 64);
+    }
+
+    70% {
+        fill: blueviolet;
+        stroke: rgb(8, 43, 68);
+    }
+
+    85% {
+        fill: rgb(43, 214, 226);
+        stroke: rgb(115, 234, 78);
+    }
+}
+
+.special + image{
+    opacity: 0;
+}
+
+.special:hover + image{
+    opacity: 1;
+}
+
+.figure {
+    background: rgba(66, 61, 5, 0.5);
+    width: max-content;
+    height: max-content;
+}
+
+.figure:hover image{
+    opacity: 0;
+}
+
+.funny__figure:hover {
+    cursor: pointer;
+}
+
+.funny__figure:hover image{
+    opacity: 0;
+}
+
+.funny__figure:hover + image{
+    opacity: 1; 
+}
+
+.face__secondary {
+    opacity: 0;
+}
+
+.face__main {
+    opacity: 1;
+    animation: movingFace 5s infinite;
+}
+
+@keyframes movingFace {
+    0% {
+        transform: rotateY(20deg);
+    }
+
+    20% {
+        transform: rotateY(45deg);
+    }
+
+    50% {
+        transform: rotateY(15deg);
+    }
+    
+    70% {
+        transform: rotateY(45deg);
+    }
+
+    100% {
+        transform: rotateY(15deg);
+    }
+}
+
